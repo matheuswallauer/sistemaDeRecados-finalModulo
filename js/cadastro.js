@@ -1,83 +1,94 @@
-let campoEmail = document.querySelector("#input_email");
+let emailCadastro = document.querySelector("#input_email");
 let labelEmail = document.querySelector("#label_input_email");
-let validEmail = false;
+let validaEmail = false;
 
-let campoSenha = document.querySelector("#input_senha");
+let senhaCadastro = document.querySelector("#input_senha");
 let labelSenha = document.querySelector("#label_input_senha");
-let validSenha = false;
+let validaSenha = false;
 
-let campoConfirmaSenha = document.querySelector("#input_confirma_senha");
-let labelConfirmaSenha = document.querySelector("#label_input_confirma_senha");
-let validConfirmaSenha = false;
+let repetirSenhaCadastro = document.querySelector("#input_confirma_senha");
+let labelRepetirSenha = document.querySelector("#label_input_confirma_senha");
+let validaRepetirSenha = false;
 
 let formularioCadastro = document.querySelector("#formulario_cadastro");
-let botaoCriarConta = document.querySelector("#botao_criar_conta");
+let btnCriarConta = document.querySelector("#botao_criar_conta");
 
 let regSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-campoEmail.addEventListener("keyup", verificaEmail);
+emailCadastro.addEventListener("keyup", verificaEmail);
 
 function verificaEmail() {
-  if (campoEmail.value.length < 10) {
+  if (emailCadastro.value.length < 10) {
     labelEmail.setAttribute("style", "color: red");
-    labelEmail.innerHTML = "E-mail: *Insira no minimo 10 caracteres";
-    campoEmail.setAttribute("style", "display: block; margin-botton: 15px; width: 415px; border-color: red");
-    validEmail = false;
+    labelEmail.innerHTML = "Insira no mínimo 10 caracteres";
+    emailCadastro.setAttribute(
+      "style",
+      "display: block; margin-bottom: 5px; margin-top: 5px; width: 323px; border: 2px solid red;"
+    );
+    validaEmail = false;
   } else {
-    labelEmail.setAttribute("style", "color: green");
-    labelEmail.innerHTML = "E-mail:";
-    campoEmail.setAttribute("style", "display: block; margin-botton: 15px; width: 415px; border-color: green");
-    validEmail = true;
-  }
-
-  campoSenha.addEventListener("keyup", verificaSenha);
-
-  function verificaSenha() {
-    let senhaValida = campoSenha.value.match(regSenha);
-
-    if (campoSenha.value.length < 8) {
-      labelSenha.setAttribute("style", "color: red");
-      labelSenha.innerHTML = "Senha: * insira no mínimo 8 caracteres";
-      campoSenha.setAttribute("style", "display: block; margin-bottom: 15px; width: 415px; border-color: red;");
-      validSenha = false;
-    } else if (senhaValida === null) {
-      labelSenha.innerHTML = "Senha: *Deve conter uma letra maíuscula e caracteres especiais";
-      validSenha = false;
-    } else {
-      labelSenha.setAttribute("style", "color: green");
-      labelSenha.innerHTML = "Senha: ";
-      campoSenha.setAttribute("style", "display: block; margin-bottom: 15px; width: 415px; border-color: green;");
-      validSenha = true;
-    }
+    labelEmail.innerHTML = "";
+    emailCadastro.setAttribute("style", "display: block; width: 323px; border: 2px solid green;");
+    validaEmail = true;
   }
 }
 
-campoConfirmaSenha.addEventListener("keyup", verificaConfirmaSenha);
+senhaCadastro.addEventListener("keyup", verificaSenha);
 
-function verificaConfirmaSenha() {
-  if (campoSenha.value !== campoConfirmaSenha.value) {
-    labelConfirmaSenha.setAttribute("style", "color: red");
-    labelConfirmaSenha.innerHTML = "Confirme a senha: *A senha digitada não corresponde";
-    campoConfirmaSenha.setAttribute("style", "display: block; margin-bottom: 15px; width: 415px; border-color: red;");
-    validConfirmaSenha = false;
+function verificaSenha() {
+  let senhaValida = senhaCadastro.value.match(regSenha);
+
+  if (senhaCadastro.value.length < 6) {
+    labelSenha.setAttribute("style", "color: red");
+    labelSenha.innerHTML = "Insira no mínimo 6 caracteres";
+    senhaCadastro.setAttribute(
+      "style",
+      "display: block; margin-bottom: 5px; margin-top: 5px; width: 323px; border: 2px solid red;"
+    );
+    emailCadastro.setAttribute("style", "display: block; width: 323px; border: 2px solid green; margin-bottom: 7px");
+    validaSenha = false;
+  } else if (senhaValida == null) {
+    labelSenha.innerHTML = "Deve conter uma letra maíuscula, um número e um caracter especial";
+    validaSenha = false;
   } else {
-    labelConfirmaSenha.setAttribute("style", "color: green");
-    labelConfirmaSenha.innerHTML = "Confirme a senha";
-    campoConfirmaSenha.setAttribute("style", "display: block; margin-bottom: 15px; width: 415px; border-color: green;");
-    validConfirmaSenha = true;
+    labelSenha.innerHTML = "";
+    senhaCadastro.setAttribute("style", "display: block; width: 323px; border: 2px solid green;");
+    validaSenha = true;
   }
 }
-botaoCriarConta.addEventListener("click", verificaCampos);
+
+repetirSenhaCadastro.addEventListener("keyup", verificaRepetirSenha);
+
+function verificaRepetirSenha() {
+  if (senhaCadastro.value != repetirSenhaCadastro.value) {
+    labelRepetirSenha.setAttribute("style", "color: red");
+    labelRepetirSenha.innerHTML = "As senhas são diferentes";
+    repetirSenhaCadastro.setAttribute(
+      "style",
+      "display: block; margin-bottom: 5px; margin-top: 5px; width: 323px; border: 2px solid red;"
+    );
+    senhaCadastro.setAttribute("style", "display: block; width: 323px; border: 2px solid green; margin-bottom: 7px");
+    validaRepetirSenha = false;
+  } else {
+    labelRepetirSenha.innerHTML = "";
+    repetirSenhaCadastro.setAttribute("style", "display: block; width: 323px; border: 2px solid green;");
+    validaRepetirSenha = true;
+  }
+}
+
+btnCriarConta.addEventListener("click", (e) => {
+  e.preventDefault();
+  verificaCampos();
+});
 
 function verificaCampos() {
-  if (campoEmail.value === "" || campoSenha.value === "" || campoConfirmaSenha.value === "") {
+  if (emailCadastro.value === "" || senhaCadastro.value === "" || repetirSenhaCadastro.value === "") {
     alert("Algo deu errado! Por favor, verifique se você preencheu todos os campos");
-  } else if (!validEmail || !validSenha || !validConfirmaSenha) {
+  } else if (!validaEmail || !validaSenha || !validaRepetirSenha) {
     alert("Campos incorretos! Por favor, verifique se você preencheu todos os campos corretamente");
   } else {
-    alert("Conta foi criada com sucesso");
-
-    salvarNoLocalStorage(criarObjetoUsuario(campoEmail.value, campoSenha.value, campoConfirmaSenha.value));
+    alert("Conta criada com sucesso!");
+    salvarNoLocalStorage(criarObjetoUsuario(emailCadastro.value, senhaCadastro.value, repetirSenhaCadastro.value));
     window.location.href = "index.html";
   }
 }
@@ -88,11 +99,10 @@ function salvarNoLocalStorage(objetoUsuario) {
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
-function criarObjetoUsuario(email, senha, confirmaSenha) {
+function criarObjetoUsuario(email, senha) {
   const objetoUsuario = {
-    login: email,
+    email: email,
     senha: senha,
-    confirmaSenha: confirmaSenha,
   };
   return objetoUsuario;
 }
