@@ -1,0 +1,472 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.div1_login {
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  width: 20rem;
+}
+
+.div2_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+}
+.form_login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.titulo_login {
+  font-family: "Anek Odia", sans-serif;
+}
+.input_email_login {
+  border: 0;
+  margin-top: 5rem;
+  background: transparent;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+}
+
+.input_password_login {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  margin-top: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+
+.botao_entrar {
+  background-color: #00008b;
+  color: white;
+  margin-top: 3rem;
+  padding: 15px 20px;
+  width: 40%;
+  border-radius: 12px;
+  font-family: "Barlow", sans-serif;
+}
+.botao_entrar:hover {
+  background: #87cefa;
+  color: white;
+}
+
+.botao_criar_conta {
+  background-color: #8b0000;
+  color: white;
+  padding: 15px 20px;
+  width: 40%;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  align-items: center;
+}
+.botao_criar_conta:hover {
+  background: #cd5c5c;
+  color: white;
+}
+.container_cadastro {
+  display: flex;
+  flex-direction: row;
+}
+
+.div1_cadastro {
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div2_cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+  background-color: white;
+}
+.form_cadastro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.titulo_cadastro {
+  font-family: "Anek Odia", sans-serif;
+}
+.input_email_cadastro {
+  border: 0;
+  margin-top: 4rem;
+  background: transparent;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+}
+.input_password_casatro {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  margin-top: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+.input_password_casatro_2 {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  margin-top: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+.botao_crie_sua_conta {
+  background-color: #8b0000;
+  color: white;
+  margin-top: 4rem;
+  padding: 15px 20px;
+  width: 40%;
+  border-radius: 12px;
+  font-family: "Barlow", sans-serif;
+}
+.botao_crie_sua_conta:hover {
+  background: #cd5c5c;
+  color: white;
+}
+
+.form-cadastro {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr.registros:hover {
+  background-color: #bbbb;
+}
+
+.inputRecados {
+  width: 500px;
+  height: 30px;
+  border: 2px solid #dddfe2;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+.inputRecadosRegistro {
+  width: 200px;
+  height: 30px;
+  border: 2px solid #dddfe2;
+  border-radius: 5px;
+  margin-right: 4rem;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+button.btn-editar {
+  background-color: blue;
+}
+
+button.btn-apagar {
+  background-color: red;
+}
+
+input#btn-salvar {
+  background-color: green;
+  color: white;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+} */
+* {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #faf0e6;
+}
+
+.colunaUm {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 400px;
+}
+
+.colunaDois {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_login {
+  width: 400px;
+}
+
+.box-login {
+  box-shadow: 0 2px 3px #a9a9a9, 0 10px 15px #a9a9a9;
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 5px;
+  height: 300px;
+}
+
+.titulo_login {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  letter-spacing: 2px;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+.inputs_login {
+  margin-top: 15px;
+  padding-left: 10px;
+  width: 323px;
+  height: 45px;
+  border: none;
+  background-color: #ffffe0;
+  border-radius: 5px;
+  outline: none;
+  color: #f08080;
+}
+
+.inputs_login::placeholder {
+  color: #f08080;
+}
+
+.botao_entrar {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  width: 338px;
+  height: 40px;
+  letter-spacing: 1px;
+  background-color: #48d1cc;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.botao_entrar:hover {
+  background-color: #87cefa;
+  transition: 300ms;
+}
+
+.botao_criar_conta {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 338px;
+  height: 40px;
+  letter-spacing: 1px;
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.botao_criar_conta:hover {
+  background-color: #ffa07a;
+  transition: 300ms;
+}
+
+.background-recados {
+  background-color: #faf0e6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.centralizar_recados {
+  box-shadow: 0 2px 3px #a9a9a9, 0 10px 15px #a9a9a9;
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 5px;
+  width: 1200px;
+}
+
+.inputRecados {
+  margin-left: 20px;
+  margin-top: 5px;
+  padding-left: 10px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background-color: #ffffe0;
+  color: #f08080;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.inputRecados::placeholder {
+  color: #f08080;
+}
+
+.titulo-recados {
+  color: #1e90ff;
+  padding-left: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.titulo-th {
+  color: #1e90ff;
+  width: 200px;
+}
+
+.descricao-th {
+  color: #1e90ff;
+  width: 300px;
+}
+
+.acoes-th {
+  color: #1e90ff;
+  width: 470px;
+}
+
+.btn-salvar {
+  background-color: #48d1cc;
+  color: #fff;
+  border: none;
+  height: 35px;
+  width: 80px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-salvar:hover {
+  background-color: #87cefa;
+  transition: 250ms;
+}
+
+.botao-sair-recados {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  height: 35px;
+  width: 80px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botao-sair-recados:hover {
+  background-color: #ffa07a;
+  transition: 250ms;
+}
+
+.btn-editar-recados {
+  background-color: #54ab72;
+}
+
+.btn-editar-recados:hover {
+  background-color: #144405df;
+  transition: 250ms;
+}
+
+.btn-apagar-recados {
+  background-color: rgb(196, 64, 64);
+}
+
+.btn-apagar-recados:hover {
+  background-color: #700416;
+  transition: 250ms;
+}
+
+.titulo-td {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 410px;
+  color: #f08080;
+}
+
+.descricao-td {
+  padding: 10px;
+  padding-right: 340px;
+  color: #f08080;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de recados</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="background-recados">
+      <div class="centralizar_recados">
+        <h1 class="titulo-recados">MEU SISTEMA DE RECADOS</h1>
+        <form id="form-cadastro" class="form-cadastro">
+          <input type="text" name="titulo-recado" id="input-titulo" class="inputRecados" placeholder="Titulo" />
+          <input
+            type="text"
+            name="descricao-recado"
+            id="input-descricao"
+            class="inputRecados"
+            placeholder="Descrição do Recado"
+          />
+          <button type="submit" value="Salvar" id="btn-salvar" class="btn-salvar">Salvar</button>
+          <button type="submit" value="sair" id="botao-sair-recados" class="botao-sair-recados">Sair</button>
+        </form>
+        <table id="tabela-registros">
+          <thead>
+            <tr class="alinhamento-recados">
+              <!-- <th class="titulo-th">Título</th>
+              <th class="descricao-th">Descrição</th>
+              <th class="acoes-th">Ações</th> -->
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr class="registros"></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
