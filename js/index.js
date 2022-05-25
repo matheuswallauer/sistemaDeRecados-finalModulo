@@ -1,7 +1,7 @@
 document.querySelector("#botao-logar").addEventListener("click", (e) => {
   e.preventDefault();
 
-  logar();
+  entrar();
 });
 document.querySelector("#botao-criar-conta-login").addEventListener("click", (e) => {
   e.preventDefault();
@@ -13,34 +13,33 @@ function redirecionar() {
   window.location.href = "cadastro.html";
 }
 
-function logar() {
-  const login = document.querySelector("#email-login");
-  const senha = document.querySelector("#senha-login");
+function entrar() {
+  const emailLogin = document.querySelector("#email-login");
+  const senhaLogin = document.querySelector("#senha-login");
 
-  let usuarios_novo = [];
+  let novoUsuario = [];
 
-  //pego todos os dados de usuarios que tenho no localstorage
-  usuarios_novo = JSON.parse(localStorage.getItem("usuarios"));
+  novoUsuario = JSON.parse(localStorage.getItem("usuarios"));
 
-  //crio um objeto para comparar com os dados do objero que vem do localstorage
   let usuario = {
-    email: "",
-    senha: "",
+    email: " ",
+    senha: " ",
   };
 
-  usuarios_novo.forEach((element) => {
-    if (element.login === login.value && element.senha === senha.value) {
+  novoUsuario.forEach((element) => {
+    if (element.email === emailLogin.value && element.senha === senhaLogin.value) {
       usuario = {
-        email: element.login,
+        email: element.email,
         senha: element.senha,
       };
     }
   });
 
-  if (usuario.email === login.value && usuario.senha === senha.value) {
+  if (usuario.email === emailLogin.value && usuario.senha === senhaLogin.value) {
+    alert(`Seja bem vindo '${emailLogin.value}'!`);
     sessionStorage.setItem("logado", usuario.email);
     window.location.href = "home.html";
   } else {
-    alert("Algo de errado nao está certo!");
+    alert("E-mail ou senha incorretos!");
   }
 }
